@@ -2,15 +2,34 @@
 <html>
   <head>
     <style>
-      image {
-        position: absolute
-        top 8px
-        left 8px;
-      }
-    </style>
+          .parent {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .image1 {
+      position: relative;
+      top: 0;
+      left: 0;
+      border: 1px red solid;
+    }
+    .image2 {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      border: 1px green solid;
+    }
+
+
+    <div class="parent">
+      <img class="image1" src="banner image.jpg" />
+      <img class="image2" src="logo banner.png" />
+    </div>
+
+
     
-    <img id="image"  src = "banner image.jpg" width = "1300" height = "550">
-    <img id="image" src = "logo banner.png" alt="banner" width = "1300" height = "300" >
+    <!--img id="image"  src = "banner image.jpg" width = "1300" height = "550">
+    <img id="image" src = "logo banner.png" alt="banner" width = "1300" height = "300" -->
     <h1><b>ENG0018 Computer Laboratory 2023/24</b></h1>
     <h2>Student URN: 6820303</h2>
     <hr>
