@@ -124,7 +124,71 @@ p.ex1 {
       <br>In Conclusion, managing space debris, and controlling its growth, is vital to maintain stability of services that rely on satellites. It should be a part of every space-faring nation, and cooperation’s environmental and sustainability policy. The implications of neglecting it could be catastrophic, and as significant as the threat of climate change.<br>
     
      </b5>
+<h2> Conference Presentation: Kessler Syndrome</h2>
+     <script>
+       var slideImages = ["Slide1.jpg", "Slide2A.jpg", "Slide2B.jpg", "Slide3.jpg", "Slide4.jpg", "Slide5.jpg"];
+       var currentSlide = 0;
+       function showSlide() {
+         document.getElementById('slide').src = slideImages[currentSlide];
+       }
+       function nextSlide() {
+         currentslide = (currentslide +1) % slideImages.length;
+         showSlide()
+       }
+       function prevSlide() {
+         currentslide = (currentslide - 1 + slideImages.length) % slideImages.length;
+         showSlide()
+       }
+       function showSlideNumber(slideNumber) {
+         currentSlide = slideNumber - 1;
+         showSlide();
+       }
+       showSlide()
+     </script>
+    <div class="button-container">
+      <button class="button" onclick="prevSlide()">Previous</button>
+      <button class="button" onclick="nextSlide()">Next</button>
+    </div>
+    <div class="slide-number-container">
+      <button class="button" onclick="showSlideNumber(1)">1</button>
+      <button class="button" onclick="showSlideNumber(2)">1</button>
+      <button class="button" onclick="showSlideNumber(3)">1</button>
+      <button class="button" onclick="showSlideNumber(4)">1</button>
+    </div>
+    <style> 
+    #slide-container {
+      text-align: centre;
+      position: relative;
+    }
+      .button-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: -100px;
+      }
+      .button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: ponter;
+        margin: 0 5px;
+      }
+      .slide-number-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: tanslateX(-50%);
+        margin-bottom: -50px;
+      }
+    </style>
 
+
+
+     
      <b3 id="References"> <b><br>References</b></b3>
      
      <b5 style="fontsize: 12px;">
