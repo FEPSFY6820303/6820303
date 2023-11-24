@@ -188,12 +188,15 @@ Accessed October 8th 2023</b3>
     </p>
   </body>
 
+
+
+<!--  
   <h2> Conference Presentation: Kessler Syndrome</h2>
      <script>
        var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
        var currentSlide = 0;
        function showSlide() {
-         document.getElementById('slide').src = slideImages[currentSlide];
+         document.getElementById('Slide').src = slideImages[currentSlide];
        }
        function nextSlide() {
          currentslide = (currentslide +1) % slideImages.length;
@@ -252,7 +255,92 @@ Accessed October 8th 2023</b3>
         margin-bottom: -50px;
       }
     </style>
+-->
 
+
+  <head>
+  <hr>
+  <h2 style="font-family: Arial, sans-serif"><b>Conference Presentation: Kessler Syndrome</b></h2>
+</head>
+ 
+<script>
+  // Array of slide image URLs
+  var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
+  var currentSlide = 0;
+  function showSlide() {
+    document.getElementById('slide').src = slideImages[currentSlide];
+  }
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideImages.length;
+    showSlide();
+   }
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+    showSlide();
+  }
+  // Function to show a specific slide based on the button clicked
+  function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber - 1;
+    showSlide();
+  }
+  // Call showSlide() to display the first slide
+  showSlide();
+</script>
+
+<div id="slide-container">
+  <img id="slide" src="slide1.png" alt"=Slide 1" style="width:100%; max-width:800px;">
+
+<! Previous and Next buttons container>
+<div class="button-container">
+  <button class="button" onclick="prevSlide()">Previous</button>
+  <button class="button" onclick="nextSlide()">Next</button>
+</div>
+
+<! Slide number buttons container>  
+<div class="slide-number-container">
+  <button class="button" onclick="showSlideNumber(1)">1</button>
+  <button class="button" onclick="showSlideNumber(2)">2</button>
+  <button class="button" onclick="showSlideNumber(3)">3</button>
+  <button class="button" onclick="showSlideNumber(4)">4</button>
+  <button class="button" onclick="showSlideNumber(5)">5</button>
+</div>
+
+<style>
+  /* Style to center the image */
+  #slide-container {
+    text-align: center;
+    position: relative;
+  }
+ 
+  /* Style for the buttpns */
+  .button-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -100px;  /* Add some margin between the image and buttons */
+  }
+
+  .button {
+    padding 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;  /* Add some margin between the buttons */
+  }
+
+  .slide-number-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -50px;  /* Add some margin between the slide number buttons and the image */
+  }
+ 
+</style>
   
 </html>
 
